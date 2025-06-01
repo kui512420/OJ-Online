@@ -22,7 +22,7 @@ export class FilleControllerService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/user/file/file/upload',
+            url: '/api/user/file/upload',
             headers: {
                 'Accesstoken': accesstoken,
             },
@@ -46,7 +46,7 @@ export class FilleControllerService {
     ): CancelablePromise<any> {
         return __request(OpenAPI, {
             method: 'POST',
-            url: '/api/user/file/file/upload/question',
+            url: '/api/user/file/upload/question',
             headers: {
                 'Accesstoken': accesstoken,
             },

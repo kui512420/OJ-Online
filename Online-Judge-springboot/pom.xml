@@ -128,6 +128,11 @@
             <artifactId>easyexcel</artifactId>
             <version>3.3.2</version>
         </dependency>
+        <!-- hibernate-validator -->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>

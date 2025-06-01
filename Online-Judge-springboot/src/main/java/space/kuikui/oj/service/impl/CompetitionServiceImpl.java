@@ -181,18 +181,12 @@ public class CompetitionServiceImpl extends ServiceImpl<CompetitionMapper, Compe
             
             // 设置状态
             LocalDateTime now = LocalDateTime.now();
-            System.out.println(now+"-");
-            System.out.println(startTime+"-");
-            System.out.println(endTime+"-");
             if (now.isAfter(endTime)) {
                 competition.setStatus(2); // 已结束
-                System.out.println("状态: 已结束");
             } else if (now.isAfter(startTime)) {
                 competition.setStatus(1); // 进行中
-                System.out.println("状态: 进行中");
             } else {
                 competition.setStatus(0); // 未开始
-                System.out.println("状态: 未开始");
             }
             
             competition.setCreateTime(now);

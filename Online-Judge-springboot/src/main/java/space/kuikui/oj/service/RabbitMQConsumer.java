@@ -57,7 +57,7 @@ public class RabbitMQConsumer {
 
             List<JudgeInfo> judgeInfoList = response.getJudgeInfo();
 
-            judgeInfoList.forEach(System.out::println);
+            // judgeInfoList.forEach(System.out::println);
             // 查询用户是否是首次通过
 
             Long questionId =  executeCodeRequest.getQuestion().getId();
@@ -68,7 +68,6 @@ public class RabbitMQConsumer {
                     .eq("userId",userId)
                                 .eq("status", 2);
             boolean isFirst = questionSubmitMapper.selectCount(queryWrapper) == 0;
-            System.out.println(response.getStatus()+"sdsd");
             if (response.getStatus() == 2) {
                 // 更新执行的代码的状态
                 if(isFirst){
@@ -82,7 +81,6 @@ public class RabbitMQConsumer {
                 updateQuestionSubmitStatus(submitId,2);
 
             }else{
-                System.out.println(submitId+"sdsd");
                 updateQuestionSubmitStatus(submitId,3);
             }
             updateJudgeInfo(submitId,judgeInfoList);

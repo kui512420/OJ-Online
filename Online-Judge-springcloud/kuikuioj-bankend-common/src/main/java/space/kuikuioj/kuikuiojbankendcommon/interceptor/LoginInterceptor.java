@@ -40,7 +40,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String requestURI = request.getRequestURI();
-        System.out.println(requestURI);
+        // System.out.println(requestURI);
         // 检查是否是不需要拦截的路径
         for (String path : EXCLUDED_PATHS) {
             if (requestURI.startsWith(path)) {

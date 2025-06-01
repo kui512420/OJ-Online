@@ -40,7 +40,7 @@ public class JavaDockerCodeSandBox implements CodeSandBox {
     
     private static final long TIMEOUT = 10000L; // 10秒超时
     private static final String JAVA_IMAGE = "openjdk:17-slim"; // 使用精简版Java镜像
-    private static final String TEMP_PATH = System.getProperty("user.dir") + File.separator + "docker_temp";
+    private static final String TEMP_PATH = System.getProperty("user.dir") + File.separator + "temp";
     private static final String TEMP_FILE_NAME = "Main.java";
 
     // 定义危险代码的正则表达式模式列表

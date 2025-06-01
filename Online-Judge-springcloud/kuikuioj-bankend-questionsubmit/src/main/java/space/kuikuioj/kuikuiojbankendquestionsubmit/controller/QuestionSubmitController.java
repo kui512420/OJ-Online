@@ -149,7 +149,7 @@ public class QuestionSubmitController {
             @RequestParam(defaultValue = "1") int pageNum,
             @RequestParam(defaultValue = "10") int pageSize,
             @RequestHeader(value = "Accesstoken", required = false) String token) {
-        System.out.println(666);
+        // System.out.println(666);
         Long userId = null;
         try {
             userId = Long.valueOf((String) jwtLoginUtils.jwtPeAccess(token).get("id"));

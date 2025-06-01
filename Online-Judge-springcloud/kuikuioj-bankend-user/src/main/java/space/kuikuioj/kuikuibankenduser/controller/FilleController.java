@@ -72,7 +72,7 @@ public class FilleController {
         // 获取文件的类型
         String type = FileTypeUtil.getType(file.getInputStream());
         if(!StringUtils.containsAny(type,"jpg","jpeg","png")){
-            System.out.println("非图片文件");
+            // System.out.println("非图片文件");
         }else{
             FileWriter writer = new FileWriter(String.valueOf(header));
             writer.writeFromStream(file.getInputStream());
@@ -112,7 +112,7 @@ public class FilleController {
         // 获取文件的类型
         String type = FileTypeUtil.getType(file.getInputStream());
         if(!StringUtils.containsAny(type,"jpg","jpeg","png")){
-            System.out.println("非图片文件");
+            // System.out.println("非图片文件");
         }else{
             FileWriter writer = new FileWriter(String.valueOf(header));
             writer.writeFromStream(file.getInputStream());

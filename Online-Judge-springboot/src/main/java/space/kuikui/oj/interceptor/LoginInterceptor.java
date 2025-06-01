@@ -36,7 +36,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     // 定义不需要拦截的路径
     private static final List<String> EXCLUDED_PATHS = Arrays.asList(
-            "/api/user/login", "/api/user/register", "/api/user/captcha", "/api/user/email","/api/file"
+            "/api/user/login", "/api/user/register", "/api/user/captcha", "/api/user/email","/api/user/file"
             ,"/api/user/rank/accept-count"
     );
 
@@ -67,8 +67,6 @@ public class LoginInterceptor implements HandlerInterceptor {
         String userId = jwtResult.get("id").toString();
         // 从 Redis 中获取保存的 Token
         boolean isExist = redisSetTokenExample.isTokenExistsInSet(userId, token);
-
-        System.out.println(isExist);
 
         if (!isExist) {
             logger.error("请求路径 {}，Token 在 Redis 中不存在，抛出异常：账号已过期，请重新登录", requestURI);

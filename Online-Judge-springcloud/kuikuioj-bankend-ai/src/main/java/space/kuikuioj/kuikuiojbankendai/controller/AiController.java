@@ -54,7 +54,6 @@ public class AiController {
         Prompt prompt = new Prompt(List.of(systemMessage, userMessage));
         
         ChatResponse response = chatClient.call(prompt);
-        System.out.println(response.getResult().getOutput().getContent());
         return ResultUtils.success("生成成功", response.getResult().getOutput().getContent());
     }
     
