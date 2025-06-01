@@ -226,7 +226,7 @@ npm run test
 ## 📞 联系方式
 
 - 项目维护者: [kuikui](mailto:kui512420@163.com)
-- 项目主页: [https://github.com/your-username/OJ-Online](https://github.com/your-username/OJ-Online)
+
 
 ## 🔗 相关链接
 
