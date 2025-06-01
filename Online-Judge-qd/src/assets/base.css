@@ -1,0 +1,228 @@
+/* Modern color palette */
+:root {
+  /* Light theme colors */
+  --color-background: #ffffff;
+  --color-background-soft: #f8f8f8;
+  --color-background-mute: #f2f2f2;
+  
+  --color-border: rgba(60, 60, 60, 0.12);
+  --color-border-hover: rgba(60, 60, 60, 0.29);
+  
+  --color-text: #2c3e50;
+  --color-text-soft: rgba(60, 60, 60, 0.66);
+  --color-text-mute: rgba(60, 60, 60, 0.38);
+  
+  --color-heading: #2c3e50;
+  --color-heading-soft: rgba(60, 60, 60, 0.66);
+  
+  --color-primary: #409eff;
+  --color-primary-hover: #66b1ff;
+  --color-primary-active: #3a8ee6;
+  
+  --color-success: #67c23a;
+  --color-warning: #e6a23c;
+  --color-danger: #f56c6c;
+  --color-info: #909399;
+  
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-shadow-hover: rgba(0, 0, 0, 0.2);
+  
+  --section-gap: 160px;
+}
+
+/* Dark theme colors */
+:root.dark {
+  --color-background: #1a1a1a;
+  --color-background-soft: #242424;
+  --color-background-mute: #2c2c2c;
+  
+  --color-border: rgba(84, 84, 84, 0.48);
+  --color-border-hover: rgba(84, 84, 84, 0.65);
+  
+  --color-text: rgba(235, 235, 235, 0.64);
+  --color-text-soft: rgba(235, 235, 235, 0.8);
+  --color-text-mute: rgba(235, 235, 235, 0.5);
+  
+  --color-heading: #ffffff;
+  --color-heading-soft: rgba(235, 235, 235, 0.8);
+  
+  --color-primary: #409eff;
+  --color-primary-hover: #66b1ff;
+  --color-primary-active: #3a8ee6;
+  
+  --color-success: #67c23a;
+  --color-warning: #e6a23c;
+  --color-danger: #f56c6c;
+  --color-info: #909399;
+  
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-shadow-hover: rgba(0, 0, 0, 0.4);
+}
+
+/* Base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode specific styles */
+:root.dark {
+  color-scheme: dark;
+}
+
+:root.dark body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+:root.dark img {
+  filter: brightness(0.8);
+}
+
+/* Arco Design 组件暗黑模式样式 */
+:root.dark .arco-card {
+  background-color: var(--color-background-soft);
+  border-color: var(--color-border);
+}
+
+:root.dark .arco-menu {
+  background-color: var(--color-background-soft);
+}
+
+:root.dark .arco-menu-item {
+  color: var(--color-text);
+}
+
+:root.dark .arco-menu-item:hover {
+  background-color: var(--color-background-mute);
+}
+
+:root.dark .arco-menu-item-selected {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+:root.dark .arco-layout {
+  background-color: var(--color-background);
+}
+
+:root.dark .arco-layout-header {
+  background-color: var(--color-background-soft);
+  border-bottom: 1px solid var(--color-border);
+}
+
+:root.dark .arco-layout-sider {
+  background-color: var(--color-background-soft);
+  border-right: 1px solid var(--color-border);
+}
+
+:root.dark .arco-layout-content {
+  background-color: var(--color-background);
+}
+
+:root.dark .arco-layout-footer {
+  background-color: var(--color-background-soft);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Buttons */
+button {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+button:active {
+  background-color: var(--color-primary-active);
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 8px 12px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+/* Cards and containers */
+.card {
+  background-color: var(--color-background-soft);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 12px var(--color-shadow);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px var(--color-shadow-hover);
+}
+
+/* Utility classes */
+.text-primary { color: var(--color-primary); }
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-danger { color: var(--color-danger); }
+.text-info { color: var(--color-info); }
+
+.bg-primary { background-color: var(--color-primary); }
+.bg-success { background-color: var(--color-success); }
+.bg-warning { background-color: var(--color-warning); }
+.bg-danger { background-color: var(--color-danger); }
+.bg-info { background-color: var(--color-info); }

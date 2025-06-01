@@ -1,0 +1,57 @@
+# 微服务配置文件模板 - 请复制此文件到各个微服务的 src/main/resources/ 目录下
+# 并重命名为 application-local.yml，然后填入真实配置信息
+
+server:
+  port: 8080  # 根据不同微服务修改端口号
+
+# RabbitMQ配置
+rabbitmq:
+  host: 127.0.0.1
+  port: 5672
+  username: YOUR_RABBITMQ_USERNAME
+  password: YOUR_RABBITMQ_PASSWORD
+
+# API密钥配置
+yuapi:
+  client:
+    api-key: YOUR_API_KEY
+    secret-key: YOUR_SECRET_KEY
+
+spring:
+  application:
+    name: your-service-name  # 根据微服务名称修改
+  
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: YOUR_DB_USERNAME
+    password: YOUR_DB_PASSWORD
+    url: jdbc:mysql://localhost:3306/YOUR_DATABASE_NAME?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+  
+  # 邮箱配置（如果需要）
+  mail:
+    host: smtp.qq.com
+    port: 587
+    username: YOUR_EMAIL@qq.com
+    password: YOUR_EMAIL_PASSWORD
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  # Redis配置
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    password: YOUR_REDIS_PASSWORD # 如果有密码的话
+
+  # 注册中心配置（根据使用的注册中心调整）
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: YOUR_NACOS_USERNAME
+        password: YOUR_NACOS_PASSWORD 
