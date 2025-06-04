@@ -16,7 +16,7 @@ import java.util.Date;
  * @date 2025/4/25 16:48
  */
 @RestController
-@RequestMapping("/api/tag")
+@RequestMapping("/api/question/tag")
 public class TagController {
     @Resource
     private TagService tagService;

@@ -110,7 +110,7 @@ const getLoginLogList = async () => {
       current: current.value,
       pageSize: pageSize.value,
       userAccount: searchParams.value.userAccount,
-      ipAddress: searchParams.value.ipAddress,
+      ip: searchParams.value.ipAddress,
       startTime: searchParams.value.timeRange?.[0],
       endTime: searchParams.value.timeRange?.[1],
     }

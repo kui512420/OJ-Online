@@ -18,7 +18,7 @@ import space.kuikui.oj.service.LoginLogService;
  * @date 2025/4/27 16:46
  */
 @RestController
-@RequestMapping("/api/loginLog")
+@RequestMapping("/api/user/loginLog")
 public class LoginLogController {
 
     @Resource
